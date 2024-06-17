@@ -1,0 +1,15 @@
+D:\Github project\Epicode-BE-Work-U1\Esercizio-S1-L1\Esercizio-S1-L1\obj\Debug\net8.0\Esercizio-S1-L1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github project\Epicode-BE-Work-U1\Esercizio-S1-L1\Esercizio-S1-L1\obj\Debug\net8.0\Esercizio-S1-L1.AssemblyInfoInputs.cache
+D:\Github project\Epicode-BE-Work-U1\Esercizio-S1-L1\Esercizio-S1-L1\obj\Debug\net8.0\Esercizio-S1-L1.AssemblyInfo.cs
+D:\Github project\Epicode-BE-Work-U1\Esercizio-S1-L1\Esercizio-S1-L1\obj\Debug\net8.0\Esercizio-S1-L1.csproj.CoreCompileInputs.cache
+D:\Github project\Epicode-BE-Work-U1\Esercizio-S1-L1\Esercizio-S1-L1\obj\Debug\net8.0\Esercizio-S1-L1.sourcelink.json
+D:\Github project\Epicode-BE-Work-U1\Esercizio-S1-L1\Esercizio-S1-L1\bin\Debug\net8.0\Esercizio-S1-L1.exe
+D:\Github project\Epicode-BE-Work-U1\Esercizio-S1-L1\Esercizio-S1-L1\bin\Debug\net8.0\Esercizio-S1-L1.deps.json
+D:\Github project\Epicode-BE-Work-U1\Esercizio-S1-L1\Esercizio-S1-L1\bin\Debug\net8.0\Esercizio-S1-L1.runtimeconfig.json
+D:\Github project\Epicode-BE-Work-U1\Esercizio-S1-L1\Esercizio-S1-L1\bin\Debug\net8.0\Esercizio-S1-L1.dll
+D:\Github project\Epicode-BE-Work-U1\Esercizio-S1-L1\Esercizio-S1-L1\bin\Debug\net8.0\Esercizio-S1-L1.pdb
+D:\Github project\Epicode-BE-Work-U1\Esercizio-S1-L1\Esercizio-S1-L1\obj\Debug\net8.0\Esercizio-S1-L1.dll
+D:\Github project\Epicode-BE-Work-U1\Esercizio-S1-L1\Esercizio-S1-L1\obj\Debug\net8.0\refint\Esercizio-S1-L1.dll
+D:\Github project\Epicode-BE-Work-U1\Esercizio-S1-L1\Esercizio-S1-L1\obj\Debug\net8.0\Esercizio-S1-L1.pdb
+D:\Github project\Epicode-BE-Work-U1\Esercizio-S1-L1\Esercizio-S1-L1\obj\Debug\net8.0\Esercizio-S1-L1.genruntimeconfig.cache
+D:\Github project\Epicode-BE-Work-U1\Esercizio-S1-L1\Esercizio-S1-L1\obj\Debug\net8.0\ref\Esercizio-S1-L1.dll

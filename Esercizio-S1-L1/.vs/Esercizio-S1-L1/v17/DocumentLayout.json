@@ -1,0 +1,111 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Github project\\Epicode-BE-Work-U1\\Esercizio-S1-L1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3040CD4B-6B55-4BEA-90EE-B0E4310083CE}|Esercizio-S1-L1\\Esercizio-S1-L1.csproj|d:\\github project\\epicode-be-work-u1\\esercizio-s1-l1\\esercizio-s1-l1\\animale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3040CD4B-6B55-4BEA-90EE-B0E4310083CE}|Esercizio-S1-L1\\Esercizio-S1-L1.csproj|solutionrelative:esercizio-s1-l1\\animale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3040CD4B-6B55-4BEA-90EE-B0E4310083CE}|Esercizio-S1-L1\\Esercizio-S1-L1.csproj|d:\\github project\\epicode-be-work-u1\\esercizio-s1-l1\\esercizio-s1-l1\\automobile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3040CD4B-6B55-4BEA-90EE-B0E4310083CE}|Esercizio-S1-L1\\Esercizio-S1-L1.csproj|solutionrelative:esercizio-s1-l1\\automobile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3040CD4B-6B55-4BEA-90EE-B0E4310083CE}|Esercizio-S1-L1\\Esercizio-S1-L1.csproj|d:\\github project\\epicode-be-work-u1\\esercizio-s1-l1\\esercizio-s1-l1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3040CD4B-6B55-4BEA-90EE-B0E4310083CE}|Esercizio-S1-L1\\Esercizio-S1-L1.csproj|solutionrelative:esercizio-s1-l1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3040CD4B-6B55-4BEA-90EE-B0E4310083CE}|Esercizio-S1-L1\\Esercizio-S1-L1.csproj|d:\\github project\\epicode-be-work-u1\\esercizio-s1-l1\\esercizio-s1-l1\\dipentente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3040CD4B-6B55-4BEA-90EE-B0E4310083CE}|Esercizio-S1-L1\\Esercizio-S1-L1.csproj|solutionrelative:esercizio-s1-l1\\dipentente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3040CD4B-6B55-4BEA-90EE-B0E4310083CE}|Esercizio-S1-L1\\Esercizio-S1-L1.csproj|d:\\github project\\epicode-be-work-u1\\esercizio-s1-l1\\esercizio-s1-l1\\atleta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3040CD4B-6B55-4BEA-90EE-B0E4310083CE}|Esercizio-S1-L1\\Esercizio-S1-L1.csproj|solutionrelative:esercizio-s1-l1\\atleta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Github project\\Epicode-BE-Work-U1\\Esercizio-S1-L1\\Esercizio-S1-L1\\Program.cs",
+              "RelativeDocumentMoniker": "Esercizio-S1-L1\\Program.cs",
+              "ToolTip": "D:\\Github project\\Epicode-BE-Work-U1\\Esercizio-S1-L1\\Esercizio-S1-L1\\Program.cs",
+              "RelativeToolTip": "Esercizio-S1-L1\\Program.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAkwCcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T12:26:08.809Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Automobile.cs",
+              "DocumentMoniker": "D:\\Github project\\Epicode-BE-Work-U1\\Esercizio-S1-L1\\Esercizio-S1-L1\\Automobile.cs",
+              "RelativeDocumentMoniker": "Esercizio-S1-L1\\Automobile.cs",
+              "ToolTip": "D:\\Github project\\Epicode-BE-Work-U1\\Esercizio-S1-L1\\Esercizio-S1-L1\\Automobile.cs",
+              "RelativeToolTip": "Esercizio-S1-L1\\Automobile.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACoAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T13:22:45.471Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Animale.cs",
+              "DocumentMoniker": "D:\\Github project\\Epicode-BE-Work-U1\\Esercizio-S1-L1\\Esercizio-S1-L1\\Animale.cs",
+              "RelativeDocumentMoniker": "Esercizio-S1-L1\\Animale.cs",
+              "ToolTip": "D:\\Github project\\Epicode-BE-Work-U1\\Esercizio-S1-L1\\Esercizio-S1-L1\\Animale.cs",
+              "RelativeToolTip": "Esercizio-S1-L1\\Animale.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T13:16:04.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dipentente.cs",
+              "DocumentMoniker": "D:\\Github project\\Epicode-BE-Work-U1\\Esercizio-S1-L1\\Esercizio-S1-L1\\Dipentente.cs",
+              "RelativeDocumentMoniker": "Esercizio-S1-L1\\Dipentente.cs",
+              "ToolTip": "D:\\Github project\\Epicode-BE-Work-U1\\Esercizio-S1-L1\\Esercizio-S1-L1\\Dipentente.cs",
+              "RelativeToolTip": "Esercizio-S1-L1\\Dipentente.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAmwCkAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T13:05:24.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Atleta.cs",
+              "DocumentMoniker": "D:\\Github project\\Epicode-BE-Work-U1\\Esercizio-S1-L1\\Esercizio-S1-L1\\Atleta.cs",
+              "RelativeDocumentMoniker": "Esercizio-S1-L1\\Atleta.cs",
+              "ToolTip": "D:\\Github project\\Epicode-BE-Work-U1\\Esercizio-S1-L1\\Esercizio-S1-L1\\Atleta.cs",
+              "RelativeToolTip": "Esercizio-S1-L1\\Atleta.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwCcAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T12:53:34.646Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
