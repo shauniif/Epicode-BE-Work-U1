@@ -37,6 +37,6 @@ class Program
         automobile1.Colore = "Rosso";
 
         automobile1.DescrizioneAuto();
-
+        // metto un commento a caso
     }
 }
