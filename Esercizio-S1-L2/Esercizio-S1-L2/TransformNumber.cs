@@ -71,13 +71,7 @@ namespace Esercizio_S1_L2
                 string centinaia = c[cen - 1];
                 string decina = TranslateNumber(resto);
                 return centinaia + decina;
-            } else if (number < 10000)
-            {
-                int migl = number / 1000;
-                int resto = number % 1000;
-                string[] m = { }
             }
-
             // 0. se non posso più tradurre
             // restituisco "overflow"
             return "overflow";
