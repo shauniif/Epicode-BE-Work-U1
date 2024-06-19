@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             arrayNomi c = new arrayNomi();
-            c.ControlloNomi();
+            c.ControlloNomi("Wario");
 
 
         }

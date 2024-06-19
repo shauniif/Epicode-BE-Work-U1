@@ -8,23 +8,18 @@ namespace Esercizio_numero_2
 {
     internal class arrayNomi
     {
-        string[] arrNomi = { "Mario", "Luigi", "Wario","Waluigi", "Toad" };
-        string nome;
 
-        public void ControlloNomi()
+        public void ControlloNomi(string name)
         {
-            Console.WriteLine("Inseririsci Il nome");
-            nome = Console.ReadLine();
-            for (int i = 0; i < arrNomi.Length; i++)
+        string[] arrNomi = { "Mario", "Luigi", "Wario","Waluigi", "Toad" };
+
+            if (arrNomi.Contains(name))
             {
-                if (arrNomi[i] == nome)
-                {
-                    Console.WriteLine("Il nome è presente nella lista");
-                } else
-                {
-                    Console.WriteLine("Il nome non è presente nella lista");
-                }
-                Console.ReadLine();
+                Console.WriteLine("Il nome è presente nella lista");
+            }
+            else
+            {
+                Console.WriteLine("Il nome non è presente nella lista");
             }
         }
     }
