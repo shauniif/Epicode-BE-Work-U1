@@ -8,9 +8,9 @@
             Console.WriteLine("Nome: " +  persona.GetNome());
             Console.WriteLine(persona.GetDettagli());
 
-            Persona persona2 = new Persona("Luigi", "Verdi", 30);
+            Person persona2 = new Person("Luigi", "Verdi", 30);
 
-            Console.WriteLine(persona2.GetDettagli());
+            Console.WriteLine(persona2.Description());
 
 
             TransformNumber translator = new TransformNumber();

@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\Github project\\Epicode-BE-Work-U1\\Esercizio-S1-L2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D78D88F-17DC-45DC-8F23-E3EC4A0D4B14}|Esercizio-S1-L2\\Esercizio-S1-L2.csproj|d:\\github project\\epicode-be-work-u1\\esercizio-s1-l2\\esercizio-s1-l2\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D78D88F-17DC-45DC-8F23-E3EC4A0D4B14}|Esercizio-S1-L2\\Esercizio-S1-L2.csproj|solutionrelative:esercizio-s1-l2\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D78D88F-17DC-45DC-8F23-E3EC4A0D4B14}|Esercizio-S1-L2\\Esercizio-S1-L2.csproj|d:\\github project\\epicode-be-work-u1\\esercizio-s1-l2\\esercizio-s1-l2\\transformnumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D78D88F-17DC-45DC-8F23-E3EC4A0D4B14}|Esercizio-S1-L2\\Esercizio-S1-L2.csproj|solutionrelative:esercizio-s1-l2\\transformnumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7D78D88F-17DC-45DC-8F23-E3EC4A0D4B14}|Esercizio-S1-L2\\Esercizio-S1-L2.csproj|d:\\github project\\epicode-be-work-u1\\esercizio-s1-l2\\esercizio-s1-l2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D78D88F-17DC-45DC-8F23-E3EC4A0D4B14}|Esercizio-S1-L2\\Esercizio-S1-L2.csproj|solutionrelative:esercizio-s1-l2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D78D88F-17DC-45DC-8F23-E3EC4A0D4B14}|Esercizio-S1-L2\\Esercizio-S1-L2.csproj|d:\\github project\\epicode-be-work-u1\\esercizio-s1-l2\\esercizio-s1-l2\\transformnumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D78D88F-17DC-45DC-8F23-E3EC4A0D4B14}|Esercizio-S1-L2\\Esercizio-S1-L2.csproj|solutionrelative:esercizio-s1-l2\\transformnumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D78D88F-17DC-45DC-8F23-E3EC4A0D4B14}|Esercizio-S1-L2\\Esercizio-S1-L2.csproj|d:\\github project\\epicode-be-work-u1\\esercizio-s1-l2\\esercizio-s1-l2\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D78D88F-17DC-45DC-8F23-E3EC4A0D4B14}|Esercizio-S1-L2\\Esercizio-S1-L2.csproj|solutionrelative:esercizio-s1-l2\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D78D88F-17DC-45DC-8F23-E3EC4A0D4B14}|Esercizio-S1-L2\\Esercizio-S1-L2.csproj|d:\\github project\\epicode-be-work-u1\\esercizio-s1-l2\\esercizio-s1-l2\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D78D88F-17DC-45DC-8F23-E3EC4A0D4B14}|Esercizio-S1-L2\\Esercizio-S1-L2.csproj|solutionrelative:esercizio-s1-l2\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,24 +26,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Persona.cs",
-              "DocumentMoniker": "D:\\Github project\\Epicode-BE-Work-U1\\Esercizio-S1-L2\\Esercizio-S1-L2\\Persona.cs",
-              "RelativeDocumentMoniker": "Esercizio-S1-L2\\Persona.cs",
-              "ToolTip": "D:\\Github project\\Epicode-BE-Work-U1\\Esercizio-S1-L2\\Esercizio-S1-L2\\Persona.cs",
-              "RelativeToolTip": "Esercizio-S1-L2\\Persona.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T15:06:55.138Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TransformNumber.cs",
+              "DocumentMoniker": "D:\\Github project\\Epicode-BE-Work-U1\\Esercizio-S1-L2\\Esercizio-S1-L2\\TransformNumber.cs",
+              "RelativeDocumentMoniker": "Esercizio-S1-L2\\TransformNumber.cs",
+              "ToolTip": "D:\\Github project\\Epicode-BE-Work-U1\\Esercizio-S1-L2\\Esercizio-S1-L2\\TransformNumber.cs",
+              "RelativeToolTip": "Esercizio-S1-L2\\TransformNumber.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAgAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T19:11:08.236Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -49,22 +53,35 @@
               "RelativeDocumentMoniker": "Esercizio-S1-L2\\Program.cs",
               "ToolTip": "D:\\Github project\\Epicode-BE-Work-U1\\Esercizio-S1-L2\\Esercizio-S1-L2\\Program.cs",
               "RelativeToolTip": "Esercizio-S1-L2\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAANAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T12:47:44.759Z",
+              "WhenOpened": "2024-06-18T19:09:35.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Person.cs",
+              "DocumentMoniker": "D:\\Github project\\Epicode-BE-Work-U1\\Esercizio-S1-L2\\Esercizio-S1-L2\\Person.cs",
+              "RelativeDocumentMoniker": "Esercizio-S1-L2\\Person.cs",
+              "ToolTip": "D:\\Github project\\Epicode-BE-Work-U1\\Esercizio-S1-L2\\Esercizio-S1-L2\\Person.cs",
+              "RelativeToolTip": "Esercizio-S1-L2\\Person.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T19:03:45.178Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "TransformNumber.cs",
-              "DocumentMoniker": "D:\\Github project\\Epicode-BE-Work-U1\\Esercizio-S1-L2\\Esercizio-S1-L2\\TransformNumber.cs",
-              "RelativeDocumentMoniker": "Esercizio-S1-L2\\TransformNumber.cs",
-              "ToolTip": "D:\\Github project\\Epicode-BE-Work-U1\\Esercizio-S1-L2\\Esercizio-S1-L2\\TransformNumber.cs",
-              "RelativeToolTip": "Esercizio-S1-L2\\TransformNumber.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAgwEkAAAANAAAA",
+              "Title": "Persona.cs",
+              "DocumentMoniker": "D:\\Github project\\Epicode-BE-Work-U1\\Esercizio-S1-L2\\Esercizio-S1-L2\\Persona.cs",
+              "RelativeDocumentMoniker": "Esercizio-S1-L2\\Persona.cs",
+              "ToolTip": "D:\\Github project\\Epicode-BE-Work-U1\\Esercizio-S1-L2\\Esercizio-S1-L2\\Persona.cs",
+              "RelativeToolTip": "Esercizio-S1-L2\\Persona.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T12:14:24.745Z",
+              "WhenOpened": "2024-06-18T18:57:31.335Z",
               "EditorCaption": ""
             }
           ]
