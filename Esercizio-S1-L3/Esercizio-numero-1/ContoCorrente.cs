@@ -12,13 +12,21 @@ namespace Esercizio_numero_1
         private string cognome;
         private decimal saldo;
         private bool contoAperto = false;
-
         public string Nome { get; set; }
         public string Cognome { get; set; }
         public decimal Saldo { get; set; }
-
         private bool ContoAperto {  get; set; }
 
+        public ContoCorrente() { }
+
+
+        public ContoCorrente(string nome, string cognome, decimal saldoIniziale)
+        {
+            nome = nome;
+            cognome = cognome;
+            saldo = saldoIniziale;
+            contoAperto = true;
+        }
         public void MenuBanca()
         {
             Console.WriteLine("Benvenuto nella banca Tal dei Tali");
@@ -56,16 +64,28 @@ namespace Esercizio_numero_1
             Console.WriteLine("Inserisci il tuo cognome: ");
             string Cognome = Console.ReadLine();
 
-            ContoCorrente contoCorrente = new ContoCorrente();
+            Console.WriteLine("Inserisci un saldo iniziale:");
+            string Saldo = Console.ReadLine();
+            decimal importoVersato = decimal.Parse(Saldo);
+            if (importoVersato < 1000 )
             {
-                nome = Nome;
-                cognome = Cognome;
-                saldo = 0;
-                contoAperto = true;
-                Console.WriteLine("Apertura del Conto corrente avvenuta correttamente!");
-                Console.WriteLine($"Conto Corrente n°389204 intestato a {Nome} {Cognome}");
-                MenuBanca();
+                Console.WriteLine("Devi versare una somma maggiore");
+            } else
+            {
+                ContoCorrente contoCorrente = new ContoCorrente(nome, cognome, saldo);
+                {
+                    nome = Nome;
+                    cognome = Cognome;
+                    saldo = importoVersato;
+                    contoAperto = true;
+                    Console.WriteLine("Apertura del Conto corrente avvenuta correttamente!");
+                    Console.WriteLine($"Conto Corrente n°389204 intestato a {Nome} {Cognome}");
+                    MenuBanca();
+                }
             }
+            
+
+         
 
         }
 

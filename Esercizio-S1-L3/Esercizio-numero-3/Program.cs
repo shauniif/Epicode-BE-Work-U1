@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            ArrNumb arr = new ArrNumb();
+            arr.arrNumb();
+
         }
     }
 }
