@@ -26,7 +26,7 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:0:0:{6d4078d1-5951-4ed1-ac0e-0a8099c1cce5}"
             },
             {
               "$type": "Document",
@@ -34,8 +34,8 @@
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Github project\\Epicode-BE-Work-U1\\Esercizio-S1-L3\\Esercizio-numero-3\\Program.cs",
               "RelativeDocumentMoniker": "Esercizio-S1-L3\\Esercizio-numero-3\\Program.cs",
-              "ToolTip": "D:\\Github project\\Epicode-BE-Work-U1\\Esercizio-S1-L3\\Esercizio-numero-3\\Program.cs*",
-              "RelativeToolTip": "Esercizio-S1-L3\\Esercizio-numero-3\\Program.cs*",
+              "ToolTip": "D:\\Github project\\Epicode-BE-Work-U1\\Esercizio-S1-L3\\Esercizio-numero-3\\Program.cs",
+              "RelativeToolTip": "Esercizio-S1-L3\\Esercizio-numero-3\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-19T14:26:55.062Z",
@@ -51,8 +51,7 @@
               "RelativeToolTip": "Esercizio-S1-L2\\Esercizio-S1-L2\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T08:44:40.579Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-19T08:44:40.579Z"
             },
             {
               "$type": "Document",
@@ -64,8 +63,7 @@
               "RelativeToolTip": "Esercizio-S1-L2\\Esercizio-S1-L2\\Persona.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T18:55:15.62Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-18T18:55:15.62Z"
             }
           ]
         }
