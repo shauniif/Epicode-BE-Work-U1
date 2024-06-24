@@ -51,9 +51,10 @@ namespace Esercizio_S1_L4
         }
         private static void Login()
         {
+            Console.WriteLine("Bevenuto nel login:");
             Console.WriteLine("inserisci username:");
             string username = Console.ReadLine();
-            Console.WriteLine("SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS");
+           
             Console.WriteLine("inserisci password:");
             string password = Console.ReadLine();
 
@@ -111,7 +112,7 @@ namespace Esercizio_S1_L4
             }
             Menu();
         }
-
+  
         private static void UpdateLoginHistory(DateTime LoginEffettuata)
         {
             LoginHistory[loginIndex] = LoginEffettuata;
