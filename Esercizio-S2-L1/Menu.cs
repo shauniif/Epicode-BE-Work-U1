@@ -52,8 +52,8 @@ namespace Esercizio_S2_L1
                 }
                 else if (isValidInput && choice == menuProduct.Count + 1)
                 {
-                    decimal finalTotal = TotalProductPrice();
-                    Console.WriteLine($"Il totale finale è: € {finalTotal}");
+
+                    Bill();
                     break;
                 }
                 else
@@ -76,8 +76,20 @@ namespace Esercizio_S2_L1
             return total + 3.00m;
         }
 
-        
+        public void Bill()
+        {
+            int y = 0;
+                Console.WriteLine("========================= SCONTRINO ======================================");
+            foreach (Product product in CartProduct)
+            {
+                Console.WriteLine($"{y + 1}: {product.NameProduct} (€ {product.Price})");
+                y++;
+            }
+            decimal finalTotal = TotalProductPrice();
+            Console.WriteLine();
+            Console.WriteLine($"Il totale finale è: € {finalTotal}");
 
+        }
 
     }
 }
