@@ -11,30 +11,27 @@ namespace Esercizio_S2_L1
         decimal total = 0;
         List<Product> menuProduct = new List<Product>()
         {
-            new Product { NameProduct = "Coca Cola 150 ml", Price = 2.50m},
-            new Product { NameProduct = "Insalata di pollo", Price = 5.20m},
-            new Product { NameProduct = "Pizza Margherita", Price = 10.00m},
-            new Product { NameProduct = "Pizza 4 formaggi", Price = 12.50m},
-            new Product { NameProduct = "Pizza Patatine Fritte", Price = 3.50m },
-            new Product { NameProduct = "Insalata di riso", Price = 8.00m},
-            new Product { NameProduct = "Frutta di stagione", Price = 5.00m},
-            new Product { NameProduct = "Pizza Fritta", Price = 5.00m},
-            new Product { NameProduct = "Piadina vegetariana" , Price = 6.00m},
-            new Product { NameProduct = "Panino Hamburger", Price = 7.90m}
+            new Product { Id= 1,  NameProduct = "Coca Cola 150 ml", Price = 2.50m},
+            new Product { Id= 2, NameProduct = "Insalata di pollo", Price = 5.20m},
+            new Product { Id= 3, NameProduct = "Pizza Margherita", Price = 10.00m},
+            new Product { Id= 4, NameProduct = "Pizza 4 formaggi", Price = 12.50m},
+            new Product { Id= 5, NameProduct = "Pizza Patatine Fritte", Price = 3.50m },
+            new Product { Id= 6, NameProduct = "Insalata di riso", Price = 8.00m},
+            new Product { Id= 7, NameProduct = "Frutta di stagione", Price = 5.00m},
+            new Product { Id= 8, NameProduct = "Pizza Fritta", Price = 5.00m},
+            new Product { Id= 9, NameProduct = "Piadina vegetariana" , Price = 6.00m},
+            new Product { Id= 10, NameProduct = "Panino Hamburger", Price = 7.90m}
         };
         List<Product> CartProduct = new List<Product> {};
 
         public void Allproduct()
         {
             Console.WriteLine("============== MENU ==============");
-            int i = 0;
             foreach (Product product in menuProduct)
             {
-
-                Console.WriteLine($"{i + 1}: {product.NameProduct} (€ {product.Price})");
-                i++;
+                Console.WriteLine($"{product.Id}: {product.NameProduct} (€ {product.Price})");
             }
-            Console.WriteLine($"{i + 1}: Stampa conto finale e conferma");
+            Console.WriteLine($"11: Stampa conto finale e conferma");
             Choiceproduct();
             Console.WriteLine("============== MENU ==============");
         }
@@ -78,12 +75,11 @@ namespace Esercizio_S2_L1
 
         public void Bill()
         {
-            int y = 0;
+            
                 Console.WriteLine("========================= SCONTRINO ======================================");
             foreach (Product product in CartProduct)
             {
-                Console.WriteLine($"{y + 1}: {product.NameProduct} (€ {product.Price})");
-                y++;
+                Console.WriteLine($"{product.NameProduct} (€ {product.Price})");
             }
             decimal finalTotal = TotalProductPrice();
             Console.WriteLine();

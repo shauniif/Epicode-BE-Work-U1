@@ -1,0 +1,37 @@
+﻿@using Esercizio_S2_L2
+@model Esercizio_S2_L2.CV
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div >
+    <h1>Informazioni Personali</h1>
+    <p>Nome: @Model.InformazioniPersonali.Nome</p>
+    <p>Cognome: @Model.InformazioniPersonali.Cognome</p>
+    <p>Telefono: @Model.InformazioniPersonali.Telefono</p>
+    <p>Email: @Model.InformazioniPersonali.Email</p>
+
+    <h2>Studi Effettuati</h2>
+    @foreach (var studi in Model.StudiEffettuati)
+    {
+        <p>Qualifica: @studi.Qualifica</p>
+        <p>Istituto: @studi.Istituto</p>
+        <p>Tipo: @studi.Tipo</p>
+        <p>Dal: @studi.Dal.ToShortDateString() Al: @studi.Al.ToShortDateString()</p>
+    }
+
+    <h2>Impieghi</h2>
+    @foreach (var impiego in Model.Impiego)
+    {
+        <p>Azienda: @impiego.Esperienza.Azienda</p>
+        <p>Job Title: @impiego.Esperienza.JobTitle</p>
+        <p>Dal: @impiego.Esperienza.Dal.ToShortDateString() Al: @impiego.Esperienza.Al.ToShortDateString()</p>
+        <p>Descrizione: @impiego.Esperienza.Descrizione</p>
+        <p>Compiti: @impiego.Esperienza.Compiti</p>
+    }
+</div>
