@@ -61,9 +61,14 @@ namespace Esercizio_S2_L3.Controllers
         public IActionResult Index()
         {
             var sale = Multisala.Sale ?? new List<Sala>();
+       
             return View(sale);
         }
-
+        public IActionResult Ticket()
+        {
+            var ticket = Multisala.Tickets ?? new List<Ticket>();
+            return View(ticket);
+        }
         public IActionResult Privacy()
         {
             return View();
