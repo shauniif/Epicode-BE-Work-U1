@@ -1,0 +1,44 @@
+﻿@model Esercizio_S2_L3.Models.Ticket
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Compra il tuo biglietto</h1>
+
+<h4>Biglietti</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <label asp-for="Nome" class="control-label"></label>
+            <input asp-for="Nome" class="control-label" />
+            <label asp-for="Cognome" class="control-label"></label>
+            <input asp-for="Cognome" class="control-label" />
+            <label asp-for="TipoBiglietto" class="control-label"></label>
+            <select asp-for="TipoBiglietto" class="form-control">
+                <option value="Intero">Intero</option>
+                <option value="Ridotto">Ridotto</option>
+            </select>
+            <label asp-for="Sala" class="control-label"></label>
+            <select asp-for="Sala">
+                @foreach (var sala in Multisala.Sale)
+                {
+                    <option value="@sala.Nome">@sala.Nome</option>
+                }
+            </select>
+            <div class="form-group">
+                <input type="submit" value="Acquista" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
