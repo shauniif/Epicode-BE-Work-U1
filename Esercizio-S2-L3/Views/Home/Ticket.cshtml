@@ -1,33 +1,25 @@
 ﻿@model List<Esercizio_S2_L3.Models.Ticket>;
 <h1>Elenco Biglietti acquistati</h1>
-
+<div class="row">
 @if (Model != null && Model.Count > 0)
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Cognome</th>
-                <th>Sala</th>
-                <th>Tipo Biglietto</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var ticket in Model)
-            {
-                <tr>
-                    <td>@ticket.Nome</td>
-                    <td>@ticket.Cognome</td>
-                    <td>@ticket.Sala</td>
-                    <td>@ticket.TipoBiglietto</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+   
+{@foreach (var ticket in Model)
+    {
+        <div class="col-12 col-md-6 col-lg-3 gy-2">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Acquirente: @ticket.Nome @ticket.Cognome</h5>
+                <p class="card-text">Sala: @ticket.Sala</p>
+                <p class="card-text">Tipo Biglietto: @ticket.TipoBiglietto</p>
+            </div>
+            </div>
+        </div>
+    }
 }
 else
 {
     <p>Nessuna biglietto acquistato.</p>
 }
+</div>
 
 <a asp-action="Index">Torna all'indice</a>

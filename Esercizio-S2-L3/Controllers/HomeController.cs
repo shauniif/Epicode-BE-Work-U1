@@ -13,8 +13,6 @@ namespace Esercizio_S2_L3.Controllers
         {
             _logger = logger;
         }
-
-
        
         [HttpGet]
         public IActionResult Create()
@@ -27,6 +25,7 @@ namespace Esercizio_S2_L3.Controllers
             if (ModelState.IsValid)
         {
             Multisala.Tickets.Add(ticket);
+            
             var sala = Multisala.Sale.FirstOrDefault(s => s.Nome == ticket.Sala);
             if (sala != null)
             {
@@ -50,8 +49,7 @@ namespace Esercizio_S2_L3.Controllers
                 {
                     sala.CapienzaMassima--;
                 }
-            
-            return RedirectToAction("Index");
+                return RedirectToAction("Index");
         }
         return View(ticket);
         }
