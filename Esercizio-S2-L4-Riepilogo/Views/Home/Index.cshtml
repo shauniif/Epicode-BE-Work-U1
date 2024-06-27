@@ -1,0 +1,21 @@
+﻿@using Esercizio_S2_L4_Riepilogo.Entities
+@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@if (Model.Any())
+{
+    foreach (var product in Model)
+    {
+        <p>@product.Name</p>
+        <p>@product.Quantity</p>
+        if(product.Available)
+        {
+            <p>Disponibile</p>
+        } else
+        {
+            <p>Non disponibile</p>
+        }
+    }
+}
