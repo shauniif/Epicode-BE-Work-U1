@@ -5,5 +5,7 @@
         public string Name { get; set; }
         public int Quantity { get; set; } = 0;
         public bool Available { get; set; }
+        
+        public IFormFile ImageProduct { get; set; }
     }
 }

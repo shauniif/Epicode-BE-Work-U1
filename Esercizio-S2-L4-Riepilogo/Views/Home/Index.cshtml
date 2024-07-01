@@ -8,8 +8,13 @@
 {
     foreach (var product in Model)
     {
+        @if (ViewBag.ProductImages != null)
+        {
+            <img src="@ViewBag.ProductImages[product.Id]" height="200" />
+        }
         <p>@product.Name</p>
         <p>@product.Quantity</p>
+
         if(product.Available)
         {
             <p>Disponibile</p>
@@ -17,5 +22,6 @@
         {
             <p>Non disponibile</p>
         }
+        <a asp-action="Detail" asp-controller="Home" asp-route-id="@product.Id" class="btn btn-secondary">Vai ai dettagli</a>
     }
 }

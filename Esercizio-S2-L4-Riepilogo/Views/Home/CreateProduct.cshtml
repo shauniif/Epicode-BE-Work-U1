@@ -10,7 +10,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="CreateProduct">
+        <form asp-action="CreateProduct" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
@@ -27,6 +27,11 @@
                     <input class="form-check-input" asp-for="Available" /> @Html.DisplayNameFor(model => model.Available)
                 </label>
             </div> 
+                <div class="form-group">
+                    <label asp-for="ImageProduct" class="control-label"></label>
+                    <input asp-for="ImageProduct" class="form-control" />
+                    <span asp-validation-for="Quantity" class="text-danger"></span>
+                </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
