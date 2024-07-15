@@ -1,0 +1,40 @@
+CREATE TABLE [dbo].[Clienti] (
+    [IdCliente]     INT           IDENTITY (1, 1) NOT NULL,
+    [Nome]          NVARCHAR (50) NOT NULL,
+    [Cognome]       NVARCHAR (50) NULL,
+    [DataDiNascita] DATETIME2 (7) NOT NULL,
+    [Email]         NVARCHAR (70) NOT NULL,
+    [Telefono]      CHAR (13)     NOT NULL,
+    [TipoCliente]   NVARCHAR (7)  NOT NULL,
+    [CodiceFiscale] CHAR (16)     NULL,
+    [PartitaIVA]    CHAR (11)     NULL,
+    PRIMARY KEY CLUSTERED ([IdCliente] ASC),
+    CONSTRAINT [CK_TipoCliente] CHECK ([TipoCliente]='Azienda' OR [TipoCliente]='Privato')
+);
+
+CREATE TABLE [dbo].[Spedizioni] (
+    [IdSpedizione]     INT             IDENTITY (1, 1) NOT NULL,
+    [NumeroSpedizione] CHAR (7)        NOT NULL,
+    [DataSpedizione]   DATETIME2 (7)   NOT NULL,
+    [Peso]             DECIMAL (10, 2) NOT NULL,
+    [CittaDestinaria]  NVARCHAR (50)   NOT NULL,
+    [Indirizzo]        NVARCHAR (50)   NOT NULL,
+    [CostoSpedizione]  MONEY           DEFAULT ((0)) NOT NULL,
+    [DataConsegna]     DATETIME2 (7)   NOT NULL,
+    [IdCliente]        INT             NOT NULL,
+    PRIMARY KEY CLUSTERED ([IdSpedizione] ASC),
+    CONSTRAINT [FK_Spedizioni_Clienti] FOREIGN KEY ([IdCliente]) REFERENCES [dbo].[Clienti] ([IdCliente])
+);
+
+
+CREATE TABLE [dbo].[AggiornamentoSpedizioni] (
+    [IdAggiornamentoSpedizione] INT            IDENTITY (1, 1) NOT NULL,
+    [Stato]                     NVARCHAR (20)  NOT NULL,
+    [Luogo]                     NVARCHAR (255) NOT NULL,
+    [Descrizione]               NVARCHAR (MAX) NULL,
+    [DataAggiornamento]         DATETIME       DEFAULT (getdate()) NOT NULL,
+    [IdSpedizione]              INT            NOT NULL,
+    PRIMARY KEY CLUSTERED ([IdAggiornamentoSpedizione] ASC),
+    CONSTRAINT [FK_AggiornamentoSpedizioni_Spedizioni] FOREIGN KEY ([IdSpedizione]) REFERENCES [dbo].[Spedizioni] ([IdSpedizione]),
+    CONSTRAINT [CK_Stato] CHECK ([Stato]='Non consegnato' OR [Stato]='Consegnato' OR [Stato]='In consegna' OR [Stato]='In transito')
+);
