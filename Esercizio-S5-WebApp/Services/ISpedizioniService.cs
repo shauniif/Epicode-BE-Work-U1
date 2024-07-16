@@ -2,9 +2,8 @@
 
 namespace Esercizio_S5_WebApp.Services
 {
-    public interface ICrudService<E> where E : BaseEntity
+    public interface ISpedizioniService : ICrudService<Spedizione>
     {
-        IEnumerable<E> GetAll();
 
     }
 }

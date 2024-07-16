@@ -1,15 +1,16 @@
-﻿@model IEnumerable<ClientePrivato>
+﻿@using System.Security.Claims
+@model IEnumerable<ClientePrivato>
 @{
     ViewData["Title"] = "Home Page";
+    var currenUser = (User.Identity?.IsAuthenticated ?? false) ? User.Identity.Name : "Anonimo";
 }
 
 
 
-@foreach(var clienti in Model)
+@if(currenUser != "Anonimo" )
 {
-    <p>@clienti.Nome</p>
+    <p>WOOOOOOOOOOOOOOOOOO</p>
 }
-
 
 <div class="text-center">
     <h1 class="display-4">Benvenuto nella azienda di spiedizione magica!</h1>

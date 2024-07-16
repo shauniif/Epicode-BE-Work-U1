@@ -1,5 +1,5 @@
 using Esercizio_S5_WebApp.Services;
-
+using Microsoft.AspNetCore.Authentication.Cookies;
 namespace Esercizio_S5_WebApp
 {
     public class Program
@@ -12,7 +12,14 @@ namespace Esercizio_S5_WebApp
             builder.Services.AddControllersWithViews();
 
             builder.Services
-                .AddTransient<IClientiPrivatoService, ClientiPrivatoService>();
+                .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(opt =>
+                 {
+                     opt.LoginPath = "/Auth/Login";
+                 });
+
+            builder.Services
+                .AddScoped<IAuthService, AuthService>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

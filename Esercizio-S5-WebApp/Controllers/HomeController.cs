@@ -1,5 +1,6 @@
 using Esercizio_S5_WebApp.Models;
 using Esercizio_S5_WebApp.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -8,18 +9,18 @@ namespace Esercizio_S5_WebApp.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IClientiPrivatoService _clientiPrivatoService;
 
-        public HomeController(ILogger<HomeController> logger, IClientiPrivatoService clientiPrivatoService)
+
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            _clientiPrivatoService = clientiPrivatoService;
-        }
 
+        }
+        [Authorize]
         public IActionResult Index()
         {
-            var clienti = _clientiPrivatoService.GetAll();
-            return View(clienti);
+
+            return View();
         }
 
         public IActionResult Privacy()
