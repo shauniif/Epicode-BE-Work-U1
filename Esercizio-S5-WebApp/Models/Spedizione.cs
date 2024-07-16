@@ -1,9 +1,7 @@
 ﻿namespace Esercizio_S5_WebApp.Models
 {
-    public class Spedizione
+    public class Spedizione : BaseEntity
     {
-        public int IdSpedizione { get; set; }
-
         public string NumeroSpedizione { get; set; }
         
         public decimal Peso { get; set; }

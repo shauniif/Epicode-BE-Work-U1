@@ -9,7 +9,7 @@ CREATE TABLE [dbo].[Clienti] (
     [CodiceFiscale] CHAR (16)     NULL,
     [PartitaIVA]    CHAR (11)     NULL,
     PRIMARY KEY CLUSTERED ([IdCliente] ASC),
-    CONSTRAINT [CK_TipoCliente] CHECK ([TipoCliente]='Azienda' OR [TipoCliente]='Privato')
+ // rimosso   CONSTRAINT [CK_TipoCliente] CHECK ([TipoCliente]='Azienda' OR [TipoCliente]='Privato')
 );
 
 CREATE TABLE [dbo].[Spedizioni] (

@@ -1,3 +1,5 @@
+using Esercizio_S5_WebApp.Services;
+
 namespace Esercizio_S5_WebApp
 {
     public class Program
@@ -9,6 +11,8 @@ namespace Esercizio_S5_WebApp
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            builder.Services
+                .AddTransient<IClientiPrivatoService, ClientiPrivatoService>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

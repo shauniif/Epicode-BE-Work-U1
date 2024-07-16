@@ -1,6 +1,15 @@
-﻿@{
+﻿@model IEnumerable<ClientePrivato>
+@{
     ViewData["Title"] = "Home Page";
 }
+
+
+
+@foreach(var clienti in Model)
+{
+    <p>@clienti.Nome</p>
+}
+
 
 <div class="text-center">
     <h1 class="display-4">Benvenuto nella azienda di spiedizione magica!</h1>

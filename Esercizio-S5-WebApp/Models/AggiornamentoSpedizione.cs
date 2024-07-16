@@ -1,9 +1,7 @@
 ﻿namespace Esercizio_S5_WebApp.Models
 {
-    public class AggiornamentoSpedizione
+    public class AggiornamentoSpedizione : BaseEntity
     {
-        public int IdAggiornamentoSpedizione { get; set; }
-
         public string Stato { get; set; }
 
         public string Luogo { get; set; }
