@@ -15,7 +15,7 @@ namespace Esercizio_S5_WebApp.Services
         private const string SPEDIZIONI_TOTALI = "SELECT COUNT(*) FROM Spedizioni AS s JOIN AggiornamentoSpedizioni AS a ON s.IdSpedizione = a.IdSpedizione WHERE a.Stato = 'In consegna';";
 
         // il numero totale delle spedizioni memorizzate raggruppate per città destinataria.
-        private const string SPEDIZIONI_RAGGRUPPATE_PER_CITTA = "SELECT CittaDestinaria, COUNT(*) FROM Spedizioni GROUP BY CittaDestinaria";
+        private const string SPEDIZIONI_RAGGRUPPATE_PER_CITTA = "SELECT CittaDestinaria, COUNT(*) AS NumeroSpedizioni FROM Spedizioni GROUP BY CittaDestinaria";
         public SpedizioneService(IConfiguration config) : base(config)
         {
         }
@@ -71,6 +71,22 @@ namespace Esercizio_S5_WebApp.Services
             conn.Open();
             int numerodelleSpedizioni = (int)cmd.ExecuteScalar();
             return numerodelleSpedizioni;
+        }
+
+        public Dictionary<string, int> SpedizioniPercitta()
+        {
+            var SpedizioniPerCitta = new Dictionary<string, int>();
+            var cmd = GetCommand(SPEDIZIONI_RAGGRUPPATE_PER_CITTA);
+            using var conn = GetConnection();
+            conn.Open();
+            using var reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                string CittaDestinaria = reader.GetString(0);  
+                int numeroSpedizioni = reader.GetInt32(1);                  
+                SpedizioniPerCitta[CittaDestinaria] = numeroSpedizioni;
+            }
+            return SpedizioniPerCitta;
         }
     }
 }

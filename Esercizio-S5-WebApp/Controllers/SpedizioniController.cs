@@ -21,5 +21,10 @@ namespace Esercizio_S5_WebApp.Controllers
             ViewBag.NumeroSpedizioni = numerospedizioni;
             return View(numerospedizioni); 
         }
+        public IActionResult SpedizionePerCitta() 
+        {
+            var spedizioniPerCitta = _spedizioniService.SpedizioniPercitta();
+            return View(spedizioniPerCitta);
+        }
     }
 }
