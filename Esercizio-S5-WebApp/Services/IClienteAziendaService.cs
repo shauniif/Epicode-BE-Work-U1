@@ -2,8 +2,10 @@
 
 namespace Esercizio_S5_WebApp.Services
 {
-    public interface IClienteAzienda
+    public interface IClienteAziendaService
     {
         ClienteAzienda CreateClienteAzienda(ClienteAzienda clienteAzienda);
+
+        IEnumerable<ClienteAzienda> GetClienteAziende();
     }
 }

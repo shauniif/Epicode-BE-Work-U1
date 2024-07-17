@@ -22,7 +22,8 @@ namespace Esercizio_S5_WebApp
             builder.Services
                 .AddScoped<IAuthService, AuthService>()
                 .AddScoped<ISpedizioniService, SpedizioneService>()
-                .AddScoped<IClientePrivato, ClientePrivatoService>();
+                .AddScoped<IClientePrivatoService, ClientePrivatoService>()
+                .AddScoped<IClienteAziendaService, ClienteAziendaService>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

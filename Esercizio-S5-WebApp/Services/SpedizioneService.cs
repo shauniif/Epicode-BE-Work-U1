@@ -22,8 +22,32 @@ namespace Esercizio_S5_WebApp.Services
             "FROM AggiornamentoSpedizioni asp JOIN Spedizioni AS s ON asp.IdSpedizione = s.IdSpedizione " +
             "JOIN Clienti AS c ON s.IdCliente = c.IdCliente " +
             "WHERE (c.CodiceFiscale = @CFOrPIVA OR c.PartitaIVA = @CFOrPIVA) AND s.NumeroSpedizione = @NumeroSpedizione ORDER BY asp.DataAggiornamento DESC";
+        private const string CREA_SPEDIZIONE = "INSERT INTO " +
+            "Spedizioni(NumeroSpedizione, DataSpedizione, Peso, CittaDestinaria, Indirizzo, NominativoDestinatario, CostoSpedizione, DataConsegna, IdCliente) " +
+            "OUTPUT INSERTED.IdSpedizione " +
+            "VALUES(@NumeroSpedizione, @DataSpedizione, @Peso, @CittaDestinaria, @Indirizzo, @NominativoDestinatario, @CostoSpedizione, @DataConsegna, @IdCliente)";
+
         public SpedizioneService(IConfiguration config) : base(config)
         {
+        }
+
+        public Spedizione Creaspedizione(Spedizione spedizione)
+        {
+            var cmd = GetCommand(CREA_SPEDIZIONE);
+            using var conn = GetConnection();
+            conn.Open();
+            cmd.Parameters.Add(new SqlParameter("@NumeroSpedizione", spedizione.NumeroSpedizione));
+            cmd.Parameters.Add(new SqlParameter("@DataSpedizione", spedizione.DataSpedizione));
+            cmd.Parameters.Add(new SqlParameter("@Peso", spedizione.Peso));
+            cmd.Parameters.Add(new SqlParameter("@CittaDestinaria", spedizione.CittaDestinataria));
+            cmd.Parameters.Add(new SqlParameter("@Indirizzo", spedizione.IndirizzoDestinatario));
+            cmd.Parameters.Add(new SqlParameter("@NominativoDestinatario", spedizione.NominativoDestinatario));
+            cmd.Parameters.Add(new SqlParameter("@DataConsegna", spedizione.DataConsegna));
+            cmd.Parameters.Add(new SqlParameter("@CostoSpedizione", spedizione.CostoSpedizione));
+            cmd.Parameters.Add(new SqlParameter("@IdCliente", spedizione.IdCliente));
+
+            spedizione.Id = (int)cmd.ExecuteScalar();
+            return spedizione;
         }
 
         public Spedizione CreateReader(DbDataReader reader)

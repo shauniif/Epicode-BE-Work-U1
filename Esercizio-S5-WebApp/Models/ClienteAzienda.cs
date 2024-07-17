@@ -2,6 +2,7 @@
 {
     public class ClienteAzienda : ClienteBase
     {
+
         public string PartitaIVA { get; set; }
     }
 }

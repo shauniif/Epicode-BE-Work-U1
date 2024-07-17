@@ -4,6 +4,7 @@ namespace Esercizio_S5_WebApp.Services
 {
     public interface ISpedizioniService : ICrudService<Spedizione>
     {
+        Spedizione Creaspedizione(Spedizione spedizione);
         IEnumerable<Spedizione> GetSpedizioniOdierne();
 
         int NumerodelleSpedizioni();

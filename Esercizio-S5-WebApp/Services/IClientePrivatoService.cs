@@ -2,9 +2,10 @@
 
 namespace Esercizio_S5_WebApp.Services
 {
-    public interface IClientePrivato
+    public interface IClientePrivatoService
     {
         ClientePrivato CreateClientePrivato(ClientePrivato clientePrivato);
 
+        IEnumerable<ClientePrivato> GetClientePrivati();
     }
 }

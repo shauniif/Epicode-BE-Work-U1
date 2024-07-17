@@ -6,9 +6,9 @@ namespace Esercizio_S5_WebApp.Controllers
 {
     public class ClientiController : Controller
     {
-        public readonly IClientePrivato _clientePrivato;
-        public readonly IClienteAzienda _clienteAzienda;
-        public ClientiController(IClientePrivato clientePrivato, IClienteAzienda clienteAzienda) 
+        public readonly IClientePrivatoService _clientePrivato;
+        public readonly IClienteAziendaService _clienteAzienda;
+        public ClientiController(IClientePrivatoService clientePrivato, IClienteAziendaService clienteAzienda) 
         {
             _clientePrivato = clientePrivato;
             _clienteAzienda = clienteAzienda;
@@ -23,6 +23,7 @@ namespace Esercizio_S5_WebApp.Controllers
             _clientePrivato.CreateClientePrivato(clientePrivato);
             return RedirectToAction("Privacy", "Home");
         }
+
 
         public IActionResult CreateAzienda()
         {

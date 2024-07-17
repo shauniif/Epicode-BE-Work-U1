@@ -1,0 +1,84 @@
+﻿@model Esercizio_S5_WebApp.Models.Spedizione
+
+@{
+    ViewData["Title"] = "RegistraSpedizione";
+    List<ClientePrivato> privati = ViewBag.clientiPrivati;
+    List<ClienteAzienda> aziende = ViewBag.clientiAziende;
+}
+
+<h1>RegistraSpedizione</h1>
+
+<h4>Spedizione</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="RegistraSpedizione">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IdCliente" class="control-label"></label>
+                <select asp-for="IdCliente" class="form-select input-FPA">
+                    @foreach (var cliente in privati)
+                    {
+                        <option value="@cliente.Id">@cliente.Nome @cliente.Cognome</option>
+                    }
+                    @foreach (var cliente in aziende)
+                    {
+                        <option value="@cliente.Id">@cliente.Nome</option>
+                    }
+                </select>
+                <span asp-validation-for="IdCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumeroSpedizione" class="control-label"></label>
+                <input asp-for="NumeroSpedizione" class="form-control" />
+                <span asp-validation-for="NumeroSpedizione" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Peso" class="control-label"></label>
+                <input asp-for="Peso" class="form-control" />
+                <span asp-validation-for="Peso" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataSpedizione" class="control-label"></label>
+                <input asp-for="DataSpedizione" class="form-control" />
+                <span asp-validation-for="DataSpedizione" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CittaDestinataria" class="control-label"></label>
+                <input asp-for="CittaDestinataria" class="form-control" />
+                <span asp-validation-for="CittaDestinataria" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IndirizzoDestinatario" class="control-label"></label>
+                <input asp-for="IndirizzoDestinatario" class="form-control" />
+                <span asp-validation-for="IndirizzoDestinatario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NominativoDestinatario" class="control-label"></label>
+                <input asp-for="NominativoDestinatario" class="form-control" />
+                <span asp-validation-for="NominativoDestinatario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CostoSpedizione" class="control-label"></label>
+                <input asp-for="CostoSpedizione" class="form-control" />
+                <span asp-validation-for="CostoSpedizione" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataConsegna" class="control-label"></label>
+                <input asp-for="DataConsegna" class="form-control" />
+                <span asp-validation-for="DataConsegna" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
