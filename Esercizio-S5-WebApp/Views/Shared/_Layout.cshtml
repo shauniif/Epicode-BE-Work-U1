@@ -31,6 +31,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="Logout">Esci</a>
                         </li>
+                        
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Informazioni 
@@ -38,10 +39,18 @@
                             <ul class="dropdown-menu">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Spedizioni" asp-action="SpedizioniGiornaliere">Spedizioni Odierne</a>
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Spedizioni" asp-action="NumeroDiSpedizioni">Numero di Spiedizioni </a>
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Spedizioni" asp-action="SpedizionePerCitta">Numero di Spiedizioni </a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Spedizioni" asp-action="SpedizionePerCitta"> Spedizioni per Città </a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Spedizioni" asp-action="VerificaLaTuaSpedizione"> Verifica la tua spedizione</a>
                             </ul>
                         </li>
-                       
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Creazioni
+                            </a>
+                            <ul class="dropdown-menu">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Clienti" asp-action="CreatePrivato">Crea Cliente Privato</a>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>

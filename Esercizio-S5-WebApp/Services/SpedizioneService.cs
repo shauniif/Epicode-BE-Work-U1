@@ -3,6 +3,7 @@ using Esercizio_S5_WebApp.Models;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Runtime.ConstrainedExecution;
 using System.Data.Common;
+using System.Data.SqlClient;
 
 namespace Esercizio_S5_WebApp.Services
 {
@@ -16,6 +17,11 @@ namespace Esercizio_S5_WebApp.Services
 
         // il numero totale delle spedizioni memorizzate raggruppate per città destinataria.
         private const string SPEDIZIONI_RAGGRUPPATE_PER_CITTA = "SELECT CittaDestinaria, COUNT(*) AS NumeroSpedizioni FROM Spedizioni GROUP BY CittaDestinaria";
+
+        private const string VERIFY_SPEDIZIONE = "SELECT asp.IdAggiornamentoSpedizione, asp.Stato, asp.Luogo, asp.Descrizione " +
+            "FROM AggiornamentoSpedizioni asp JOIN Spedizioni AS s ON asp.IdSpedizione = s.IdSpedizione " +
+            "JOIN Clienti AS c ON s.IdCliente = c.IdCliente " +
+            "WHERE (c.CodiceFiscale = @CFOrPIVA OR c.PartitaIVA = @CFOrPIVA) AND s.NumeroSpedizione = @NumeroSpedizione ORDER BY asp.DataAggiornamento DESC";
         public SpedizioneService(IConfiguration config) : base(config)
         {
         }
@@ -87,6 +93,31 @@ namespace Esercizio_S5_WebApp.Services
                 SpedizioniPerCitta[CittaDestinaria] = numeroSpedizioni;
             }
             return SpedizioniPerCitta;
+        }
+
+        public IEnumerable<AggiornamentoSpedizione> VerificaAggiornamentoSpedizione(string CFOrPIVA, string NumeroSpedizone)
+        {
+            var AggiornamentoSpedizione = new List<AggiornamentoSpedizione>();
+            var cmd = GetCommand(VERIFY_SPEDIZIONE);
+            cmd.Parameters.Add(new SqlParameter("@CFOrPIVA", CFOrPIVA));
+            cmd.Parameters.Add(new SqlParameter("@NumeroSpedizione", NumeroSpedizone));
+            using var conn = GetConnection();
+            conn.Open();
+            using var reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                AggiornamentoSpedizione.Add(
+                new AggiornamentoSpedizione
+                {
+                    Id = reader.GetInt32(0),
+                    Stato = reader.GetString(1),
+                    Luogo = reader.GetString(2),
+                    Descrizione = reader.GetString(3)
+                });
+            }
+
+            return AggiornamentoSpedizione;
+
         }
     }
 }
