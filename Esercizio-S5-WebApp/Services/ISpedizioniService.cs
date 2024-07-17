@@ -7,5 +7,6 @@ namespace Esercizio_S5_WebApp.Services
         IEnumerable<Spedizione> GetSpedizioniOdierne();
 
         int NumerodelleSpedizioni();
+        // ciao
     }
 }
