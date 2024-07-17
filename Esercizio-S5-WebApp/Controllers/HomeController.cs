@@ -16,13 +16,13 @@ namespace Esercizio_S5_WebApp.Controllers
             _logger = logger;
 
         }
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public IActionResult Index()
         {
 
             return View();
         }
-
+        
         public IActionResult Privacy()
         {
             return View();

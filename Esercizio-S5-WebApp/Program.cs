@@ -19,7 +19,8 @@ namespace Esercizio_S5_WebApp
                  });
 
             builder.Services
-                .AddScoped<IAuthService, AuthService>();
+                .AddScoped<IAuthService, AuthService>()
+                .AddScoped<ISpedizioniService, SpedizioneService>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -39,7 +40,7 @@ namespace Esercizio_S5_WebApp
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Auth}/{action=Login}/{id?}");
 
             app.Run();
         }

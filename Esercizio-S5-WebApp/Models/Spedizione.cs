@@ -9,14 +9,14 @@
         public DateTime DataSpedizione { get; set; }
 
         public string CittaDestinataria { get; set; }
-        public string Indirizzo { get; set; }
+        public string IndirizzoDestinatario { get; set; }
 
+        public string NominativoDestinatario { get; set; }
         public decimal CostoSpedizione { get; set; }
 
         public DateTime DataConsegna { get; set; }
 
         public int IdCliente { get; set; }
-
 
     }
 }

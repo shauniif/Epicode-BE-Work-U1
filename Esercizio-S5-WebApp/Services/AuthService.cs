@@ -6,6 +6,7 @@ namespace Esercizio_S5_WebApp.Services
     public class AuthService : SqlServerServiceBase, IAuthService
     {
         private const string LOGIN_COMM = "SELECT IdUtente FROM Users WHERE Username = @user AND Password = @pass";
+        private const string ROLES_COMMAND = "SELECT NomeRuolo FROM Ruoli AS ro JOIN UserRoles as ur ON ro.Id = RoleId WHERE UserId = @id";
         public AuthService(IConfiguration config) : base(config)
         {
         }
@@ -30,6 +31,13 @@ namespace Esercizio_S5_WebApp.Services
                         Username = username,
                         Password = password
                     };
+                    reader.Close();
+                    using var ruoloCmd = GetCommand(ROLES_COMMAND);
+                    ruoloCmd.Parameters.Add(new SqlParameter("@id", user.Id));
+                    using var reader2 = ruoloCmd.ExecuteReader();
+                    while (reader2.Read()) {
+                        user.Ruoli.Add(reader2.GetString(0));
+                    }
                     return user;
                 }
             }

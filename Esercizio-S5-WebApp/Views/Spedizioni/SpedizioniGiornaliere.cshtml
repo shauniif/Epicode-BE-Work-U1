@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Spedizione>
+@{
+    ViewData["Title"] = "Home Page";
+
+}
+@foreach(var app in  Model)
+{
+    @app.NumeroSpedizione
+}
+

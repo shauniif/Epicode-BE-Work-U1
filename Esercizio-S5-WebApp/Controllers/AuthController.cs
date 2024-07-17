@@ -25,12 +25,13 @@ namespace Esercizio_S5_WebApp.Controllers
             try
             {
                 var u = _authenticationService.Login(user.Username, user.Password);
-                if (u == null) return RedirectToAction("Privacy", "Home");
+                if (u == null) return RedirectToAction("Index", "Home");
 
                 var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, u.Username)
                 };
+                u.Ruoli.ForEach(ruoli => claims.Add(new Claim(ClaimTypes.Role, ruoli)));
                 var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(identity));
             }

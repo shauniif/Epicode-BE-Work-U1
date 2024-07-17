@@ -7,10 +7,16 @@
 
 
 
-@if(currenUser != "Anonimo" )
-{
-    <p>WOOOOOOOOOOOOOOOOOO</p>
-}
+<div class="text-center">
+    <h1 class="display-4">Benvenuto @currenUser</h1>
+    <ul>
+  @foreach(var c in User.Claims.Where(cl => cl.Type == ClaimTypes.Role))
+        {
+            <li>@c.Value</li>
+        }
+    </ul>
+</div>
+
 
 <div class="text-center">
     <h1 class="display-4">Benvenuto nella azienda di spiedizione magica!</h1>
