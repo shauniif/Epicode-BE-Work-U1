@@ -1,5 +1,4 @@
 ﻿using Esercizio_S5_WebApp.Services;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Esercizio_S5_WebApp.Controllers
@@ -11,13 +10,11 @@ namespace Esercizio_S5_WebApp.Controllers
         {
             _spedizioniService = spedizioniService;
         }
-        [Authorize(Roles = "Workers")]
         public IActionResult SpedizioniGiornaliere()
         {
             var spedizioni = _spedizioniService.GetSpedizioniOdierne();
             return View(spedizioni);
         }
-        [Authorize(Roles = "Workers")]
         public IActionResult NumeroDiSpedizioni()
         {
             var numerospedizioni = _spedizioniService.NumerodelleSpedizioni();
