@@ -16,7 +16,7 @@ namespace Esercizio_S5_WebApp.Controllers
             _logger = logger;
 
         }
-        [Authorize(Roles = "Admin")]
+        
         public IActionResult Index()
         {
 
