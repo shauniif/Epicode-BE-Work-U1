@@ -1,12 +1,31 @@
-﻿@model Dictionary<string, int>
-
+﻿@model QueryView
 @{
-    ViewData["Title"] = "Spedizioni per Città";
+    ViewData["Title"] = "Home Page";
+
 }
+
+<h2>Spedizioni Odierne</h2>
+@if (Model.SpedizioniOdierne.Any())
+{
+    @foreach(var app in  Model.SpedizioniOdierne)
+    {
+    @app.NumeroSpedizione
+    }
+}
+else 
+{
+    <p>Non ci sono spedizioni in data odierna.</p>
+}
+
+<h2>Numero delle Spedizioni in Consegna</h2>
+
+@Model.SpedizioniTotali
+
+
 
 <h2>Spedizioni per Città</h2>
 
-@if (Model.Any())
+@if (Model.SpedizioniPercitta.Any())
 {
     <table class="table">
         <thead>
@@ -16,7 +35,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in Model)
+            @foreach (var item in Model.SpedizioniPercitta)
             {
                 <tr>
                     <td>@item.Key</td>

@@ -12,5 +12,7 @@ namespace Esercizio_S5_WebApp.Services
         Dictionary<string, int> SpedizioniPercitta();
 
         IEnumerable<AggiornamentoSpedizione> VerificaAggiornamentoSpedizione(string CFOrPIVA, string NumeroSpedizone);
+
+        AggiornamentoSpedizione CreAggiornamentoSpedizione(int id, AggiornamentoSpedizione aggiornamentoSpedizione);
     }
 }

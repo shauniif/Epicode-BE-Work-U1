@@ -26,9 +26,27 @@ namespace Esercizio_S5_WebApp.Services
             "Spedizioni(NumeroSpedizione, DataSpedizione, Peso, CittaDestinaria, Indirizzo, NominativoDestinatario, CostoSpedizione, DataConsegna, IdCliente) " +
             "OUTPUT INSERTED.IdSpedizione " +
             "VALUES(@NumeroSpedizione, @DataSpedizione, @Peso, @CittaDestinaria, @Indirizzo, @NominativoDestinatario, @CostoSpedizione, @DataConsegna, @IdCliente)";
+        private const string CREA_AGG_SPED = "INSERT INTO " +
+            "AggiornamentoSpedizioni(Stato, Luogo, Descrizione, DataAggiornamento, IdSpedizione) " +
+            "OUTPUT INSERTED.IdAggiornamentoSpedizione " +
+            "VALUES(@Stato, @Luogo, @Descrizione, @DataAggiornamento, @IdSpedizione)"; 
 
         public SpedizioneService(IConfiguration config) : base(config)
         {
+        }
+
+        public AggiornamentoSpedizione CreAggiornamentoSpedizione(int id, AggiornamentoSpedizione aggiornamentoSpedizione)
+        {
+            var cmd = GetCommand(CREA_AGG_SPED);
+            using var conn = GetConnection();
+            conn.Open();
+            cmd.Parameters.Add(new SqlParameter("@Stato", aggiornamentoSpedizione.Stato));
+            cmd.Parameters.Add(new SqlParameter("@Luogo", aggiornamentoSpedizione.Luogo));
+            cmd.Parameters.Add(new SqlParameter("@Descrizione", aggiornamentoSpedizione.Descrizione));
+            cmd.Parameters.Add(new SqlParameter("@DataAggiornamento", aggiornamentoSpedizione.DataAggiornamento));
+            cmd.Parameters.Add(new SqlParameter("@IdSpedizione", id));
+            aggiornamentoSpedizione.Id = (int)cmd.ExecuteScalar();
+            return aggiornamentoSpedizione;
         }
 
         public Spedizione Creaspedizione(Spedizione spedizione)
@@ -74,7 +92,7 @@ namespace Esercizio_S5_WebApp.Services
             conn.Open();
             using var reader = cmd.ExecuteReader();
             var ListaSped = new List<Spedizione>();
-            if (reader.Read()) { 
+            while (reader.Read()) { 
                 ListaSped.Add(CreateReader(reader));
             }
             return ListaSped;
@@ -83,7 +101,7 @@ namespace Esercizio_S5_WebApp.Services
         public IEnumerable<Spedizione> GetSpedizioniOdierne()
         {
             var cmd = GetCommand(SPEDIZIONI_ODIERNE);
-            using var conn = GetConnection();
+            var conn = GetConnection();
             conn.Open();
             using var reader = cmd.ExecuteReader();
             var ListaSpedOd = new List<Spedizione>();
@@ -91,15 +109,17 @@ namespace Esercizio_S5_WebApp.Services
             {
                 ListaSpedOd.Add(CreateReader(reader));
             }
+            conn.Close();
             return ListaSpedOd;
         }
 
         public int NumerodelleSpedizioni()
         {
             var cmd = GetCommand(SPEDIZIONI_TOTALI);
-            using var conn = GetConnection();
+            var conn = GetConnection();
             conn.Open();
             int numerodelleSpedizioni = (int)cmd.ExecuteScalar();
+            conn.Close();
             return numerodelleSpedizioni;
         }
 
@@ -107,7 +127,7 @@ namespace Esercizio_S5_WebApp.Services
         {
             var SpedizioniPerCitta = new Dictionary<string, int>();
             var cmd = GetCommand(SPEDIZIONI_RAGGRUPPATE_PER_CITTA);
-            using var conn = GetConnection();
+            var conn = GetConnection();
             conn.Open();
             using var reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -116,6 +136,7 @@ namespace Esercizio_S5_WebApp.Services
                 int numeroSpedizioni = reader.GetInt32(1);                  
                 SpedizioniPerCitta[CittaDestinaria] = numeroSpedizioni;
             }
+            conn.Close();
             return SpedizioniPerCitta;
         }
 

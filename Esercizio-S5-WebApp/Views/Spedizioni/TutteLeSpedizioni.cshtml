@@ -1,0 +1,86 @@
+﻿@model IEnumerable<Esercizio_S5_WebApp.Models.Spedizione>
+
+@{
+    ViewData["Title"] = "TutteLeSpedizioni";
+}
+
+<h1>TutteLeSpedizioni</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroSpedizione)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Peso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataSpedizione)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CittaDestinataria)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IndirizzoDestinatario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NominativoDestinatario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CostoSpedizione)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataConsegna)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+               @item.NumeroSpedizione
+            </td>
+            <td>
+                    @item.Peso
+            </td>
+            <td>
+                @item.DataSpedizione.ToShortDateString()
+            </td>
+            <td>
+                    @item.CittaDestinataria
+            </td>
+            <td>
+                    @item.IndirizzoDestinatario
+            <td>
+                    @item.NominativoDestinatario
+            </td>
+            <td>
+                        @item.CostoSpedizione
+            </td>
+            <td>
+                @item.DataConsegna.ToShortDateString()
+            </td>
+            <td>
+                @item.IdCliente
+            </td>
+            <td>
+                @item.Id
+            </td>
+            <td>
+               <a asp-controller="Spedizioni" asp-action="CreaAggiornamentoSped" asp-route-id="@item.Id">Aggiorna Spedizione</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

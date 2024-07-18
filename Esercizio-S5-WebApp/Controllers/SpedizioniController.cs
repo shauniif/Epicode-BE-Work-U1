@@ -16,26 +16,29 @@ namespace Esercizio_S5_WebApp.Controllers
             _clientePrivatoService = clientePrivatoService;
             _clienteAziendaService = clienteAziendaService;
         }
+
         [Authorize(Roles = "Admin, Workers")]
-        public IActionResult SpedizioniGiornaliere()
+        public IActionResult SpedizioniQuery()
         {
             var spedizioni = _spedizioniService.GetSpedizioniOdierne();
-            return View(spedizioni);
-        }
-        [Authorize(Roles = "Admin, Workers")]
-        public IActionResult NumeroDiSpedizioni()
-        {
-            var numerospedizioni = _spedizioniService.NumerodelleSpedizioni();
-            ViewBag.NumeroSpedizioni = numerospedizioni;
-            return View(numerospedizioni); 
-        }
-        [Authorize(Roles = "Admin, Workers")]
-        public IActionResult SpedizionePerCitta() 
-        {
+            var numeroSpedizioni = _spedizioniService.NumerodelleSpedizioni();
             var spedizioniPerCitta = _spedizioniService.SpedizioniPercitta();
-            return View(spedizioniPerCitta);
-        }
 
+            var AllQuery = new QueryView()
+            {
+                SpedizioniOdierne = spedizioni,
+                SpedizioniTotali = numeroSpedizioni,
+                SpedizioniPercitta = spedizioniPerCitta
+            };
+        
+            return View(AllQuery);
+        }
+        
+
+        public IActionResult TutteLeSpedizioni() {
+            var tutteLeSpedizoni = _spedizioniService.GetAll();
+            return View(tutteLeSpedizoni); 
+        }
         public IActionResult RegistraSpedizione()
         {
             ViewBag.clientiPrivati = _clientePrivatoService.GetClientePrivati();
@@ -49,6 +52,23 @@ namespace Esercizio_S5_WebApp.Controllers
             var s = _spedizioniService.Creaspedizione(spedizione);
             return RedirectToAction("Index", "Home");
         }
+
+
+        [HttpGet]
+        public IActionResult CreaAggiornamentoSped()
+        {
+            return View(new AggiornamentoSpedizione());
+        }
+        [HttpPost]
+        public IActionResult CreaAggiornamentoSped(int id, AggiornamentoSpedizione aggiornamentoSspedizione)
+        {
+            var s = _spedizioniService.CreAggiornamentoSpedizione(id, aggiornamentoSspedizione);
+            return RedirectToAction("Index", "Home");
+        }
+
+
+
+
 
         [HttpGet]
         public IActionResult VerificaLaTuaSpedizione()

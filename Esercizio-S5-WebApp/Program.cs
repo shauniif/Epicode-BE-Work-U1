@@ -18,6 +18,14 @@ namespace Esercizio_S5_WebApp
                  {
                      opt.LoginPath = "/Auth/Login";
                  });
+            builder.Services.
+                AddAuthorization(opt =>
+                {
+                    opt.AddPolicy(Policies.LoggedIn, cfg => cfg.RequireAuthenticatedUser());
+                    opt.AddPolicy(Policies.IsAdmin, cfg => cfg.RequireRole("Admin"));
+                    opt.AddPolicy(Policies.IsWorker, cfg => cfg.RequireRole("Workers"));
+                });
+
 
             builder.Services
                 .AddScoped<IAuthService, AuthService>()
